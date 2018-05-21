@@ -1,7 +1,7 @@
 //头部播放
 var headtext=$(".header-text-ul")[0];
 function headerScroll(){
-		if(headtext.offsetTop==-60){
+		if(headtext.offsetTop<=-60){
 			$(".header-text-ul").eq(0).animate({top:headtext.offsetTop-30},1000,function(){
 				$(this).css("top",0);
 			})
@@ -81,10 +81,7 @@ $(function(){
 });
 $(window).scroll(function(){
 	this.scroll=$(document).scrollTop();
-	this.hea=$("#header");
 	this.aside=$("#aside-menu");
-	$(this.hea)
-	.css("top",this.scroll);
 	if(this.scroll>120){
 		$(this.aside)
 		.stop(false,false)
