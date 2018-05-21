@@ -1,20 +1,21 @@
 .banner{
 	margin-right: auto;
     margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
     width: 1140px;
     height: 520px;
     position: relative;
+    overflow: hidden;
 }
 .banner-img{
 	position: absolute;
 	width: 1140px;
 	top: 0;
+	z-index: 555;
 }
 .a-img{
 	width: 100%;
 	height: 520px;
+	border: none;
 }
 .banner::after{
 	content: "";
@@ -22,6 +23,52 @@
 	clear: both;
 	height: 0;
 	visibility: hidden;
+}
+.page-img{
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	z-index: 888;
+	bottom: 16px;
+}
+.page-span{
+	font-size: 40px;
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    margin: 0 1px;
+    background: #ddd;
+    border-radius: 100%;
+    cursor: pointer;
+}
+.page-span-active{
+	background: #000;
+}
+.page-btn{
+	position: absolute;
+    top: 0;
+    width: 9%;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    z-index: 999;
+    height: 100%;
+    cursor: pointer;
+}
+.page-prev:hover{
+	opacity: 1;
+	transition: 0.2s all;
+}
+.page-prev{
+    left: 15px;
+    background: url(http://img.tadashishoji.cn/skin/frontend/tadashishoji/responsive_v1/img/btn_prev.png) 10% 40% no-repeat;
+}
+.page-next{
+	right: 15px;
+	background: url(http://img.tadashishoji.cn/skin/frontend/tadashishoji/responsive_v1/img/btn_next.png) 90% 40% no-repeat;
+}
+.page-next:hover{
+	opacity: 1;
+	transition: 0.2s all;
 }
 .container{
 	margin-right: auto;
@@ -37,23 +84,40 @@
 	width: 25%;
 	position: relative;
     float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
 }
 .container-div-a{
 	display: block;
-	padding-right: 15px;
-	padding-left: 15px;
+	position: relative;
 }
 .container-div-img{
 	display: block;
 	width: 100%;
 }
+.container-div-img-hover{
+	position: absolute;
+	top: 0;
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+.container-div-img-hover:hover{
+	opacity: 1;
+}
 .first-div2{
 	width: 50%;
 	float: left;
+	padding-right: 15px;
+	padding-left: 15px;
+	box-sizing: border-box;
 }
 .first-div3{
 	width: 25%;
     float: left;
+    padding-right: 15px;
+	padding-left: 15px;
+	box-sizing: border-box;
 }
 .container-first::after{
 content: "";
@@ -85,6 +149,8 @@ clear: both;
 }
 .container-third{
 	margin-top: 50px;
+	padding-left: 15px;
+	padding-right: 15px;
 }
 .container-third::after{
 content: "";
@@ -111,20 +177,27 @@ clear: both;
     letter-spacing: 8px;
   
 }
-.third-ul{
-	/*width: 1140px;*/
-}
 .third-li{
 	position: relative;
     float: left;
     width: 20%;
+    overflow: hidden;
 }
 .third-li-a{
 	display: block;
 	padding: 0 10px;
 }
+.third-img-span{
+	display: block;
+	overflow: hidden;	
+}
 .third-img{
 	width: 100%;
+	transform: scale(1.1,1.1);
+	transition: transform 1s;
+}
+.third-img:hover{
+	transform: scale(1,1);	
 }
 .third-span{
 	position: absolute;
@@ -145,25 +218,91 @@ clear: both;
 }
 .container-forth{
 	margin-top: 50px;
+	padding-left: 15px;
+	padding-right: 15px;
 }
 .forth-table{
-display: block;
-	width: 1170px;
+   	display: block;
 }
 .forth-tr{
-	width: 1170px;
+	border-collapse: collapse;
+}
+.forth-table td{
+	vertical-align: top;
+	height: 100%;
+	position: relative;
+}
+.forth-hide-img{
+	opacity: 0;
+}
+.forth-hide-img:hover{
+	opacity: 1;
+}
+.forth-img-span{
+	position: absolute;
+    display: block;
+    top: 50%;
+    left: 25%;
+    width: 50%;
+    height: 36px;
+    margin-top: -18px;
+    line-height: 36px;
+    text-align: center;
+    font-size: 14px;
+    background: #000;
+    color: #fff;
 }
 .forth-td-first{
 	width: 34%;
-}
-.forth-td-a{
-	display: block;
-	/*padding: 0 10px;*/
-}
-.forth-td-img{
-	height: 100%;
-	/*width: 100%;*/
+	position: relative;
 }
 .forth-td-more{
 	width: 22%;
+	position: relative;
+}
+.forth-td-first .forth-div{
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+.forth-div .forth-td-img{
+    position: absolute;
+    width: 467px;
+    height: 655px;
+    top: 0px;
+    left: -63.5px;
+}
+.forth-td-more .forth-hide-img{
+    position: absolute;
+    top: 0px;
+}
+.forth-td-a{
+	margin-left: 5px;
+	display: block;
+}
+.forth-td-img{
+	width: 100%;
+}
+.tr-text-td{
+	width: 22%;
+	padding-left: 10px;
+}
+.text-td-name{
+	margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 14px;
+    overflow: hidden;
+}
+.text-td-price{
+	margin-bottom: 10px;
+    text-align: center;
+    font-size: 14px;
 }
