@@ -4,6 +4,8 @@
 		<meta charset="UTF-8">
 		<title></title>
 		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/font-face.css" />
+		<link rel="stylesheet" href="css/loginRegist.css" />
 	</head>
 	<body>
 		<div class="header" id="header">
@@ -35,7 +37,7 @@
 						</div>
 					</td>
 					<td class="header-table-td td-right">
-						<a>登录/注册</a>
+						<a href="loginRegist.html" id="user-login">登录/注册</a>
 					</td>
 				</tr>
 				<tr>
@@ -45,7 +47,18 @@
 						</div>
 					</td>
 					<td class="header-table-td td-right">
-						<div>我的购物车</div>
+						<div class="myCar"><a href="shopCar.html" class="myCar-a">我的购物车</a>
+							<div class="down-car" style="display: none;">
+							<div class="car-div">
+								<ol id="car-ol">
+								</ol>
+								<div class="car-action">
+									<a href="shopCar.html"><button type="button" class="car-btn">
+										<span>查看购物车</span>
+									</button></a>
+								</div>
+							</div>
+						</div>
 						<p class="car-p">您的购物车内没有物品</p>
 					</td>
 				</tr>
@@ -281,6 +294,217 @@
 				</div>
 			</div>
 		</div>
+		<div class="container">
+			<div class="main-con">
+				<div class="main-box">
+					<div class="left-login div-con">
+						<div class="title-con">
+							<h2>登录</h2>
+						</div>
+						<div class="box-con">
+							<div class="box-title">
+								<h2>
+									<span class="glyphicon glyphicon-user"></span>
+									已有账号请登录
+								</h2>
+							</div>
+							<div class="box-inner">
+								<p>请输入您的邮址和密码进入帐号</p>
+								<form id="box-form">
+									<div class="form-input">
+										<label for="ipt-email">邮箱地址/手机号码</label>
+										<input type="text" class="input-box" id="ipt-email" />
+									</div>
+									<div class="form-input">
+										<label for="ipt-email">密 码</label>
+										<input type="password" class="input-box" id="ipt-password" />
+									</div>
+									<div class="form-input">
+										<div class="form-div-row">
+											<label class="checkbox">
+												<span class="t-check">
+													<input type="checkbox" class="check-box" id="row-check-jz" checked="checked"/>
+													<i class="check-icon"></i>
+												</span>
+												<span>记住我</span>
+											</label>
+											<div class="row-find">
+												<a href="#">找回密码</a>
+											</div>
+											<a href="#">
+												<div class="form-input">
+													<button type="button" class="login-btn form-btn" id="login">登录</button>
+												</div>
+											</a>
+										</div>
+									</div>
+								</form>
+								<div class="box-bottom">
+									<a href="#">
+										<p>如果您有以下账号，可以直接登录：</p>
+									</a>
+									<div class="user-method">
+										<a href="#">
+											<img src="http://img.tadashishoji.cn/skin/frontend/tadashishoji/responsive_v1/img/btn_alipay.png" />
+										</a>
+										<a href="#">
+											<img src="http://img.tadashishoji.cn/skin/frontend/tadashishoji/responsive_v1/img/btn_wx.png" />
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="right-regist div-con">
+						<div class="title-con">
+							<h2>注册</h2>
+						</div>
+						<div class="box-con">
+							<div class="box-title">
+								<h2>
+									<span class="glyphicon glyphicon-pencil"></span>
+									 创建一个帐户，以便拥有更好的购物体验.
+								</h2>
+							</div>
+							<div class="box-inner">
+								<p>成为我们的用户你就能管理个人收货信息，收藏你喜爱的物品，获取最新的时尚资讯</p>
+								<form id="re-box-form">
+									<div class="regist-input">
+										<label for="ipt-num" class="regist-num"">手机号码</label>
+										<div class="div-number">
+											<input type="text" class="input-box inline-input" placeholder="手机号" id="ipt-mynum"/>
+											<input type="button" value="获取验证码" class="yan-btn" />
+										</div>	
+									</div>
+									<div class="regist-input">
+										<label for="ipt-num" class="regist-num"></label>
+										<div class="div-number">
+											<input type="text" class="input-box inline-input" placeholder="请输入验证码"/>
+										</div>	
+									</div>
+									<div class="regist-input">
+										<label for="ipt-num" class="regist-num">常用邮箱</label>
+										<div class="div-number">
+											<input type="text" class="input-box" placeholder="Email"/>
+											<p>请填写常用的电子邮件地址</p>
+										</div>	
+									</div>
+									<div class="regist-input">
+										<label for="ipt-date" class="regist-num">出生日期</label>
+										<div class="div-number">
+											<div class="div-date">
+												<div class="date-sele">
+													<div class="select-div">
+														<select>
+															<option value="">请选择</option>
+															<option value="1">1</option>
+															<option value="2">2</option>
+															<option value="3">3</option>
+															<option value="4">4</option>
+															<option value="5">5</option>
+															<option value="6">6</option>
+															<option value="7">7</option>
+															<option value="8">8</option>
+															<option value="9">9</option>
+															<option value="10">10</option>
+															<option value="11">11</option>
+															<option value="12">12</option>
+														</select>
+													</div>
+													
+												</div>
+												<div class="date-text">月</div>
+												<div class="date-sele">
+													<div class="select-div">
+														<select>
+															<option value="">请选择</option>
+															<option value="1">1</option>
+															<option value="2">2</option>
+															<option value="3">3</option>
+															<option value="4">4</option>
+															<option value="5">5</option>
+															<option value="6">6</option>
+															<option value="7">7</option>
+															<option value="8">8</option>
+															<option value="9">9</option>
+															<option value="10">10</option>
+															<option value="11">11</option>
+															<option value="12">12</option>
+															<option value="13">13</option>
+															<option value="14">14</option>
+															<option value="15">15</option>
+															<option value="16">16</option>
+															<option value="17">17</option>
+															<option value="18">18</option>
+															<option value="19">19</option>
+															<option value="20">20</option>
+															<option value="21">21</option>
+															<option value="22">22</option>
+															<option value="23">23</option>
+															<option value="24">24</option>
+															<option value="25">25</option>
+															<option value="26">26</option>
+															<option value="27">27</option>
+															<option value="28">28</option>
+															<option value="29">29</option>
+															<option value="30">30</option>
+														</select>
+													</div>
+												</div>
+												<div class="date-text">日</div>
+											</div>
+											<p>请填写您的出生日期 (生日一旦设定无法更改)</p>
+										</div>	
+									</div>
+									<div class="regist-input">
+										<label for="ipt-num" class="regist-num">密码</label>
+										<div class="div-number">
+											<input type="text" class="input-box" id="ipt-mypass"/>
+											<p>注册密码由6-16个字符组成，请使用英文字母加数字的组合密码</p>
+										</div>	
+									</div>
+									<div class="regist-input">
+										<label for="ipt-num" class="regist-num">确认密码</label>
+										<div class="div-number">
+											<input type="text" class="input-box"/>
+							<!--				<p></p>-->
+										</div>	
+									</div>
+									<div class="regist-input">
+										<div class="space-left">
+											<label class="checkbox">
+												<span class="t-check">
+													<input type="checkbox" class="check-box" id="row-check-zc" checked/>
+													<i class="check-icon"></i>
+												</span>
+												<span>我已阅读并接受"<a href="#">隐私政策"</a></span>
+											</label>
+											<label class="checkbox">
+												<span class="t-check">
+													<input type="checkbox" class="check-box" id="row-check-zx" checked="checked"/>
+													<i class="check-icon"></i>
+												</span>
+												<span>订阅 "TADASHI SHOJI时尚资讯"</span>
+											</label>
+										</div>
+									</div>
+									<div class="regist-input">
+										<div class="space-left">
+											<a href="#">
+												<div class="form-input">
+													<button type="button" class="login-btn form-btn" id="register">注册</button>
+												</div>
+											</a>
+										</div>
+									</div>
+									
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		<div class="aside-menu" id="aside-menu">
 			<div class="btn btn-wx">
 				<div class="btn-div-wx"></div>
@@ -429,7 +653,9 @@
 			</div>
 		</div>
 		<script type="text/javascript" src="js/jquery-3.3.1.js" ></script>
+		<script type="text/javascript" src="js/jquery.cookie.js" ></script>
 		<script type="text/javascript" src="js/common.js" ></script>
+		<script type="text/javascript" src="js/loginRegist.js" ></script>
 	</body>
 </html>
 

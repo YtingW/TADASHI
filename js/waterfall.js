@@ -12,6 +12,7 @@
                     .then(function(res){
                         this.json = res.list;
                         this.render_page();
+                        this.click_pro();
                     }.bind(this))
                     .fail(function(def,type,err_msg){
                         this.load_err();
@@ -30,13 +31,13 @@
 									<div class="pd-li-inner">
 										<div class="main-box">
 											<div class="pd-pic">
-												<a href="#">
+												<a href="detail.html" data-id=${item.id}>
 													<span class="pd-img"><img src=${item.f_img}></span>
 													<span class="pd-img pd-back"><img src=${item.b_img}></span>
 												</a>
 											</div>
-											<span class="pd-name">
-												<a href="#">${item.name}</a>
+											<span class="pd-name" >
+												<a href="#" data-id=${item.id}>${item.name}</a>
 											</span>
 											<span class="pd-price">
 												${item.price}
@@ -46,6 +47,12 @@
 								</li>`;
                     }.bind(this))
                     this.main_ele.html(this.main_ele.html() + this.html);
+                },
+                click_pro(){
+                	$(".main-box a").click(function(){
+							this.id=$(this).attr("data-id");
+							$.cookie("pro_id",this.id,{expires:7});
+							});
                 },
                 load_err(){
                     alert("报错了!");
@@ -64,9 +71,11 @@
                     .then(function(res){
                         this.json = res.list;
                         this.render_page();
+                        this.click_pro();
                         this.loading_msg = false;
                     }.bind(this))                    
                 }
             }           
-            new WaterFall("/TADASHI/JOSN/product.json",".product");
-        })
+            new WaterFall("/TADASHIS/JOSN/product.json",".product");
+       })
+       

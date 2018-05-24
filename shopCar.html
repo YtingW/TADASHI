@@ -36,7 +36,7 @@
 						</div>
 					</td>
 					<td class="header-table-td td-right">
-						<a>登录/注册</a>
+						<a href="loginRegist.html" id="user-login">登录/注册</a>
 					</td>
 				</tr>
 				<tr>
@@ -46,7 +46,18 @@
 						</div>
 					</td>
 					<td class="header-table-td td-right">
-						<div>我的购物车</div>
+						<div class="myCar"><a href="shopCar.html" class="myCar-a">我的购物车</a>
+							<div class="down-car" style="display: none;">
+							<div class="car-div">
+								<ol id="car-ol">
+								</ol>
+								<div class="car-action">
+									<a href="shopCar.html"><button type="button" class="car-btn">
+										<span>查看购物车</span>
+									</button></a>
+								</div>
+							</div>
+						</div>
 						<p class="car-p">您的购物车内没有物品</p>
 					</td>
 				</tr>
@@ -302,99 +313,8 @@
 										<td></td>
 									</tr>
 								</thead>
-								<tbody>
-									<tr class="first-body-tr">
-										<td class="item-img">
-											<a href="#">
-												<img src="http://img.tadashishoji.cn/media/catalog/product/cache/1/thumbnail/165x231/9df78eab33525d08d6e5fb8d27136e95/b/d/bdm18585s_white_petal_front.jpg" />
-											</a>
-										</td>
-										<td class="item-info">
-											<div class="item-info-name">
-												<a href="#">绣花蕾丝吊带流苏迷你裙</a>
-											</div>
-											<dl class="item-info-dl">
-												<dt>Size</dt>
-												<dd>4</dd>
-											</dl>
-											<div class="item-info-text">下单后10-15个工作日发货</div>
-										</td>
-										<td>
-											<span>普通商品</span>
-										</td>
-										<td class="tx-cn item-price">
-											<span>￥ 3,999.00</span>
-										</td>
-										<td class="tx-cn item-num">
-											<span class="item-span">
-												<span class="item-minus-icon item-icon"></span>
-											</span>
-											<input type="text" class="item-input"/>
-											<span class="item-span">
-												<span class="item-plus-icon item-icon"></span>
-											</span>
-										</td>
-										<td class="tx-cn">
-											<span class="item-span-price">￥ 7,998.00</span>
-										</td>
-										<td class="item-del">
-											<a href="#">删除项目</a>
-										</td>
-									</tr>
-									<tr class="body-tr">
-										<td class="item-img">
-											<a href="#">
-												<img src="http://img.tadashishoji.cn/media/catalog/product/cache/1/thumbnail/165x231/9df78eab33525d08d6e5fb8d27136e95/b/d/bdm18585s_white_petal_front.jpg" />
-											</a>
-										</td>
-										<td class="item-info">
-											<div class="item-info-name">
-												<a href="#">绣花蕾丝吊带流苏迷你裙</a>
-											</div>
-											<dl class="item-info-dl">
-												<dt>Size</dt>
-												<dd>4</dd>
-											</dl>
-											<div class="item-info-text">下单后10-15个工作日发货</div>
-										</td>
-										<td>
-											<span>普通商品</span>
-										</td>
-										<td class="tx-cn item-price">
-											<span>￥ 3,999.00</span>
-										</td>
-										<td class="tx-cn item-num">
-											<span class="item-span">
-												<span class="item-minus-icon item-icon"></span>
-											</span>
-											<input type="text" class="item-input"/>
-											<span class="item-span">
-												<span class="item-plus-icon item-icon"></span>
-											</span>
-										</td>
-										<td class="tx-cn">
-											<span class="item-span-price">￥ 7,998.00</span>
-										</td>
-										<td class="item-del">
-											<a href="#">删除项目</a>
-										</td>
-									</tr>
-									<tr class="odd body-tr">
-										<td colspan="7">
-											<div>
-												<div class="pull-left">
-													<p>中国大陆地区顾客提供全店免运费配送服务</p>
-													<a href="#">继续购物</a>
-												</div>
-												<div class="pull-right">
-													<strong>总计</strong>
-													<strong>
-														<span>￥ 17,176.00</span>
-													</strong>
-												</div>
-											</div>
-										</td>
-									</tr>
+								<tbody id="main-table-tbody">
+									
 								</tbody>
 								<tfoot>
 									<tr>
@@ -620,7 +540,9 @@
 			</div>
 		</div>
 		<script type="text/javascript" src="js/jquery-3.3.1.js" ></script>
+		<script type="text/javascript" src="js/jquery.cookie.js" ></script>
 		<script type="text/javascript" src="js/common.js" ></script>
+		<script type="text/javascript" src="js/shopCar.js" ></script>
 	</body>
 </html>
 

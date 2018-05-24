@@ -5,6 +5,7 @@
 		<title></title>
 		<link rel="stylesheet" href="css/common.css" />
 		<link rel="stylesheet" href="css/list.css" />
+		
 	</head>
 	<body>
 
@@ -37,7 +38,7 @@
 						</div>
 					</td>
 					<td class="header-table-td td-right">
-						<a href="#">登录/注册</a>
+						<a href="loginRegist.html" id="user-login">登录/注册</a>
 					</td>
 				</tr>
 				<tr>
@@ -47,7 +48,18 @@
 						</div>
 					</td>
 					<td class="header-table-td td-right">
-						<div>我的购物车</div>
+						<div class="myCar"><a href="shopCar.html" class="myCar-a">我的购物车</a>
+							<div class="down-car" style="display: none;">
+							<div class="car-div">
+								<ol id="car-ol">
+								</ol>
+								<div class="car-action">
+									<a href="shopCar.html"><button type="button" class="car-btn">
+										<span>查看购物车</span>
+									</button></a>
+								</div>
+							</div>
+						</div>
 						<p class="car-p">您的购物车内没有物品</p>
 					</td>
 				</tr>
@@ -782,13 +794,15 @@
 				 </div>
 			</div>
 		</div>
-		<script type="text/javascript" src="js/jquery-3.3.1.js" ></script>
+		<script type="text/javascript" src="js/jquery-3.3.1.js" ></script>		
+		<script type="text/javascript" src="js/jquery.cookie.js" ></script>
 		<script type="text/javascript" src="js/common.js" ></script>
-		<script type="text/javascript" src="js/list.js" ></script>
-		<script type="text/javascript" src="js/down.js" ></script>
 		<script type="text/javascript" src="js/waterfall.js" ></script>
+		<script type="text/javascript" src="js/down.js" ></script>
+		<script type="text/javascript" src="js/list.js" ></script>
 		<script>
 			DownPage(".colg-header",".down",".up",".colg-kind-ul");
+		
 		</script>
 	</body>
 </html>

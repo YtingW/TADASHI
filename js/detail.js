@@ -32,8 +32,3 @@ BigImg.prototype={
 		this.y=event.offsetY;
 	}
 }
-$(".pro-left-more").find("li").click(function(){
-	console.log($(".center-img-span img:first-child"));
-	$(".center-img-span img:first-child").attr("src",$(this).find("img").attr("ref"));
-	$(".span-img-big").attr("src",$(this).find("img").attr("data"));
-});
