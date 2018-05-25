@@ -1,0 +1,33 @@
+{
+  "name": "tadashi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.5.0",
+    "gulp-sass-china": "^3.1.0",
+    "gulp-uglify": "^3.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YtingW/TADASHI.git"
+  },
+  "author": "YtingW",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YtingW/TADASHI/issues"
+  },
+  "homepage": "https://github.com/YtingW/TADASHI#readme"
+}
