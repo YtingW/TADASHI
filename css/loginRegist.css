@@ -204,6 +204,10 @@
     font-size: 13px;
     margin-left: 15px;
 }
+.default-input{
+	border: 1px dashed #eb340a!important;
+    background: #faebe7!important;
+}
 .login-btn{
 	width: 150px;
 }
